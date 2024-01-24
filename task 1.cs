@@ -1,18 +1,36 @@
-// Your program should start at this line.
-/*
-Example:
-Move();
-Move();
-Move();
-Turn();
-Move();
-Move();
-Turn();
-Turn();
-Turn();
-Move();
-*/
 
+for (int i = 0; i < 37; i++)
+{
+    if (Peek())
+    {
+        Move();
+    }
+}
+
+Turn();
+
+for (int j = 0; j < 5; j++)
+{
+    Move();
+    Move();
+    Turn();
+}
+
+for (int k = 0; k < 36; k++)
+{
+    if (Peek())
+    {
+        Move();
+    }
+    Turn();
+}
+for (int l = 0; l < 38; l++)
+{
+    if (Peek())
+    {
+        Move();
+    }
+}
 
 #region Basic functions
 // These functions are just her to make your intelisense work. 
