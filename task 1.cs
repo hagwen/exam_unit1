@@ -1,3 +1,5 @@
+Console.WriteLine("helloe");
+
 
 for (int i = 0; i < 37; i++)
 {
@@ -14,7 +16,6 @@ Turn(); //12
 
 void TurnLeft()
 {
-
     for (int turns = 0; turns < 3; turns++)
     {
         Turn();
@@ -67,10 +68,53 @@ for (int k = 0; k < 36; k++)
     }
     //Turn(); 
 }
+TurnLeft();
 
+for (int q = 0; q < 2; q++)
+{
+    if (Peek())
+    {
+        Move();
+    }
+} //6
+TurnLeft();
 
+for (int k = 0; k < 36; k++)
+{
+    if (Peek())
+    {
+        Move();
+    }
+    Turn();
+}
 
+for (int u = 0; u < 2; u++)
+{
+    if (Peek())
+    {
+        Move();
+    }
+} //4
 
+for (int k = 0; k < 36; k++)
+{
+    if (Peek())
+    {
+        Move();
+    }
+    //Turn();
+}
+TurnLeft();
+
+for (int u = 0; u < 2; u++)
+{
+    if (Peek())
+    {
+        Move();
+    }
+} //2
+
+Turn();
 
 
 for (int l = 0; l < 38; l++)
@@ -79,9 +123,9 @@ for (int l = 0; l < 38; l++)
     {
         Move();
     }
-    else if
+    else if (AtGoal())
     {
-        AtGoal()
+        //WIN
     }
 }
 
