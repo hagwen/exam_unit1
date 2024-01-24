@@ -5,16 +5,41 @@ for (int i = 0; i < 37; i++)
     {
         Move();
     }
-}
+} //14
 
 Turn();
+Move();
+Move();
+Turn(); //12
 
-for (int j = 0; j < 5; j++)
+void TurnLeft()
 {
-    Move();
-    Move();
-    Turn();
+
+    for (int turns = 0; turns < 3; turns++)
+    {
+        Turn();
+    }
 }
+
+for (int k = 0; k < 36; k++)
+{
+    if (Peek())
+    {
+        Move();
+    }
+    //Turn(); 
+}
+
+TurnLeft();
+
+for (int m = 0; m < 2; m++)
+{
+    if (Peek())
+    {
+        Move();
+    }
+}
+TurnLeft(); //10
 
 for (int k = 0; k < 36; k++)
 {
@@ -24,11 +49,39 @@ for (int k = 0; k < 36; k++)
     }
     Turn();
 }
+for (int m = 0; m < 2; m++)
+{
+    if (Peek())
+    {
+        Move();
+    }
+}
+
+Turn(); //8
+
+for (int k = 0; k < 36; k++)
+{
+    if (Peek())
+    {
+        Move();
+    }
+    //Turn(); 
+}
+
+
+
+
+
+
 for (int l = 0; l < 38; l++)
 {
     if (Peek())
     {
         Move();
+    }
+    else if
+    {
+        AtGoal()
     }
 }
 
