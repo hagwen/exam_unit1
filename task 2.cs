@@ -1,10 +1,12 @@
+int onemove = 0;
+
 while (Peek())
 {
     Move();
     Turn();
 }
-
-
+Console.WriteLine("turnright.");
+Console.WriteLine(onemove);
 #region Basic functions
 // These functions are just her to make your intelisense work. 
 // They only have a conceptual function.
