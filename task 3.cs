@@ -162,17 +162,15 @@ for (int l = 0; l < 3; l++)
     if (Peek())
     {
         Move();
-        Console.WriteLine(onemove);
-
-        if (AtGoal())
-        {
-            Console.WriteLine("yeeeey, winner winner chicken dinner.");
-            return;
-        }
     }
 }
+Console.WriteLine(onemove);
 
-
+if (AtGoal())
+{
+    Console.WriteLine("yeeeey, winner winner chicken dinner.");
+    return;
+}
 
 
 
