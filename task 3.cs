@@ -88,9 +88,6 @@ if (AtGoal())
 
 
 
-
-
-
 void TurnLeft()
 {
     Console.WriteLine("Turned left");
