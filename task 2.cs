@@ -1,10 +1,19 @@
 int onemove = 0;
+const int loopLimmit = 15;
+const int MoveElevenForward = 11;
+const int MoveThreeForward = 3;
+const int MoveFiveForward = 5;
+const int MoveFourForward = 4;
+const int MoveSevenForward = 7;
+const int MoveForward = 13;
+const int MoveSixsForward = 6;
+const int MoveNineForward = 9;
+const int MoveEightForward = 8;
+const int MoveTenForward = 10;
+const int MoveTwelveForward = 12;
 
 
-
-Move();
-Move();
-Move();
+MovingForward(MoveThreeForward);
 Console.WriteLine(onemove);
 Turn();
 Move();
@@ -12,132 +21,73 @@ Move();
 Console.WriteLine(onemove);
 Turn();
 
-for (int i = 0; i < 5; i++)
-{
-    if (Peek())
-    {
-        Move();
-    }
-}
+MovingForward(MoveFiveForward);
 Console.WriteLine(onemove);
 
 Turn();
 
-for (int j = 0; j < 4; j++)
-{
-    if (Peek())
-    {
-        Move();
-    }
-}
+MovingForward(MoveFourForward);
 Console.WriteLine(onemove);
 Turn();
 
-for (int k = 0; k < 7; k++)
-{
-    if (Peek())
-    {
-        Move();
-    }
-}
+MovingForward(MoveSevenForward);
 Console.WriteLine(onemove);
 Turn();
 
-for (int y = 0; y < 6; y++)
-{
-    if (Peek())
-    {
-        Move();
-    }
-}
+MovingForward(MoveSixsForward);
 Console.WriteLine(onemove);
 Turn();
 
-for (int p = 0; p < 9; p++)
-{
-    if (Peek())
-    {
-        Move();
-    }
-}
+MovingForward(MoveNineForward);
 Console.WriteLine(onemove);
 Turn();
 
-for (int q = 0; q < 8; q++)
-{
-    if (Peek())
-    {
-        Move();
-    }
-}
+MovingForward(MoveEightForward);
 Console.WriteLine(onemove);
 Turn();
 
-for (int t = 0; t < 11; t++)
-{
-    if (Peek())
-    {
-        Move();
-    }
-}
+MovingForward(MoveElevenForward);
 Console.WriteLine(onemove);
 Turn();
 
-for (int h = 0; h < 10; h++)
-{
-    if (Peek())
-    {
-        Move();
-    }
-}
+MovingForward(MoveTenForward);
 Console.WriteLine(onemove);
 Turn();
 
-for (int d = 0; d < 13; d++)
-{
-    if (Peek())
-    {
-        Move();
-    }
-}
+MovingForward(MoveForward);
 Console.WriteLine(onemove);
 Turn();
 
-for (int l = 0; l < 12; l++)
-{
-    if (Peek())
-    {
-        Move();
-    }
-}
+MovingForward(MoveTwelveForward);
 Console.WriteLine(onemove);
 Turn();
 
-for (int m = 0; m < 15; m++)
-{
-    if (Peek())
-    {
-        Move();
-    }
-}
+MovingForward(loopLimmit);
 Console.WriteLine(onemove);
 Turn();
 
 
-for (int å = 0; å < 13; å++)
-{
-    if (Peek())
-    {
-        Move();
-        Console.WriteLine(onemove);
-
-    }
-}
-
+MovingForward(MoveForward);
+Console.WriteLine(onemove);
 if (AtGoal())
 {
     Console.WriteLine("yeeeey, winner winner chicken dinner.");
     return;
+}
+
+
+
+
+
+void MovingForward(int number)
+{
+    for (int u = 0; u < number; u++)
+    {
+        if (Peek())
+        {
+            Move();
+        }
+    }
 }
 #region Basic functions
 // These functions are just her to make your intelisense work. 

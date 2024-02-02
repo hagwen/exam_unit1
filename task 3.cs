@@ -1,15 +1,13 @@
 int onemove = 0;
+const int MoveElevenForward = 11;
+const int MoveThreeForward = 3;
+const int MoveFiveForward = 5;
+const int MoveSevenForward = 7;
+const int MoveTenForward = 10;
+const int TwoForward = 2;
 
-for (int i = 0; i < 11; i++)
-{
 
-    if (Peek())
-    {
-        Move();
-
-    }
-
-}
+MovingForward(MoveElevenForward);
 Console.WriteLine(onemove);
 Turn();
 Console.WriteLine("turnright.");
@@ -19,151 +17,67 @@ Console.WriteLine(onemove);
 Turn();
 Console.WriteLine("turnright.");
 
-for (int t = 0; t < 10; t++)
-{
-
-    if (Peek())
-    {
-        Move();
-
-    }
-
-}
+MovingForward(MoveTenForward);
 Console.WriteLine(onemove);
 TurnLeft();
 
-Move();
-Move();
+MovingForward(TwoForward);
 Console.WriteLine(onemove);
 TurnLeft();
 
-for (int e = 0; e < 10; e++)
-{
-
-    if (Peek())
-    {
-        Move();
-
-    }
-
-}
+MovingForward(MoveTenForward);
 Console.WriteLine(onemove);
 Turn();
 Console.WriteLine("turnright.");
-Move();
-Move();
+MovingForward(TwoForward);
 Console.WriteLine(onemove);
 Turn();
 Console.WriteLine("turnright.");
 
-for (int f = 0; f < 10; f++)
-{
-
-    if (Peek())
-    {
-        Move();
-
-    }
-
-}
+MovingForward(MoveTenForward);
 Console.WriteLine(onemove);
 TurnLeft();
 
-for (int r = 0; r < 7; r++)
-{
-
-    if (Peek())
-    {
-        Move();
-
-    }
-
-}
+MovingForward(MoveSevenForward);
 Console.WriteLine(onemove);
 TurnLeft();
 
-Move();
-Move();
+MovingForward(TwoForward);
 Console.WriteLine(onemove);
 
 TurnLeft();
 
-for (int y = 0; y < 5; y++)
-{
-
-    if (Peek())
-    {
-        Move();
-
-    }
-
-}
+MovingForward(MoveFiveForward);
 Console.WriteLine(onemove);
 Turn();
 Console.WriteLine("turnright.");
-Move();
-Move();
+MovingForward(TwoForward);
 Console.WriteLine(onemove);
 Turn();
 Console.WriteLine("turnright.");
 
-for (int b = 0; b < 5; b++)
-{
-
-    if (Peek())
-    {
-        Move();
-
-    }
-
-}
+MovingForward(MoveFiveForward);
 Console.WriteLine(onemove);
 TurnLeft();
 
-Move();
-Move();
+MovingForward(TwoForward);
 Console.WriteLine(onemove);
 TurnLeft();
 
-for (int x = 0; x < 5; x++)
-{
-
-    if (Peek())
-    {
-        Move();
-
-    }
-
-}
+MovingForward(MoveFiveForward);
 Console.WriteLine(onemove);
 Turn();
 Console.WriteLine("turnright.");
-Move();
-Move();
+MovingForward(TwoForward);
 Console.WriteLine(onemove);
 Turn();
 Console.WriteLine("turnright.");
 
-for (int a = 0; a < 5; a++)
-{
-
-    if (Peek())
-    {
-        Move();
-
-    }
-
-}
+MovingForward(MoveFiveForward);
 Console.WriteLine(onemove);
 TurnLeft();
 
-for (int l = 0; l < 3; l++)
-{
-    if (Peek())
-    {
-        Move();
-    }
-}
+MovingForward(MoveThreeForward);
 Console.WriteLine(onemove);
 
 if (AtGoal())
@@ -176,7 +90,7 @@ if (AtGoal())
 
 
 
-//my functions
+
 void TurnLeft()
 {
     Console.WriteLine("Turned left");
@@ -185,33 +99,41 @@ void TurnLeft()
         Turn();
     }
 }
-
+void MovingForward(int number)
+{
+    for (int u = 0; u < number; u++)
+    {
+        if (Peek())
+        {
+            Move();
+        }
+    }
+}
 #region Basic functions
-// These functions are just her to make your intelisense work. 
-// They only have a conceptual function.
+
 
 void Move()
 {
-    // Moves the car 1 cell in the direction it is heading. 
+
     onemove++;
 
 }
 
 void Turn()
 {
-    // Turns the car 90 deg clockwise.
+
 }
 
 bool Peek()
 {
-    // Returns true if the next cell is open, otherwise false.
-    return true; // Just a placeholder value. 
+
+    return true;
 }
 
 bool AtGoal()
 {
-    // Returns true if the current cell is the goal cell.
-    return true; // just a placholder
+
+    return true;
 }
 
 #endregion

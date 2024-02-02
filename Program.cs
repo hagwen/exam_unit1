@@ -1,84 +1,120 @@
 ﻿int onemove = 0;
+const int loopLimmit = 15;
+const int MoveElevenForward = 11;
+const int MoveThreeForward = 3;
+const int MoveFiveForward = 5;
+const int MoveFourForward = 4;
+const int MoveSevenForward = 7;
+const int MoveForward = 13;
+const int MoveSixsForward = 6;
+const int MoveNineForward = 9;
+const int MoveEightForward = 8;
+const int MoveTenForward = 10;
+const int MoveTwelveForward = 12;
 
-// Define the maze (you'll need to implement logic to check the maze structure)
-bool[,] maze = new bool[,]
+
+MovingForward(MoveThreeForward);
+Console.WriteLine(onemove);
+Turn();
+Move();
+Move();
+Console.WriteLine(onemove);
+Turn();
+
+MovingForward(MoveFiveForward);
+Console.WriteLine(onemove);
+
+Turn();
+
+MovingForward(MoveFourForward);
+Console.WriteLine(onemove);
+Turn();
+
+MovingForward(MoveSevenForward);
+Console.WriteLine(onemove);
+Turn();
+
+MovingForward(MoveSixsForward);
+Console.WriteLine(onemove);
+Turn();
+
+MovingForward(MoveNineForward);
+Console.WriteLine(onemove);
+Turn();
+
+MovingForward(MoveEightForward);
+Console.WriteLine(onemove);
+Turn();
+
+MovingForward(MoveElevenForward);
+Console.WriteLine(onemove);
+Turn();
+
+MovingForward(MoveTenForward);
+Console.WriteLine(onemove);
+Turn();
+
+MovingForward(MoveForward);
+Console.WriteLine(onemove);
+Turn();
+
+MovingForward(MoveTwelveForward);
+Console.WriteLine(onemove);
+Turn();
+
+MovingForward(loopLimmit);
+Console.WriteLine(onemove);
+Turn();
+
+
+MovingForward(MoveForward);
+Console.WriteLine(onemove);
+if (AtGoal())
 {
-    { true, false, true, true, true },
-    { true, true, true, false, true },
-    { true, false, false, true, true },
-    { true, true, true, true, true },
-    { true, true, false, false, true }
-};
+    Console.WriteLine("yeeeey, winner winner chicken dinner.");
+    return;
+}
 
-int currentRow = 0;    // Initial position
-int currentCol = 0;
 
-while (!AtGoal())
+
+
+
+void MovingForward(int number)
 {
-    // Check if the cell in the direction the car is facing is open
-    if (Peek(currentRow, currentCol))
+    for (int u = 0; u < number; u++)
     {
-        Move();
-        onemove++;
-
-        // Update the car's position based on the direction it's facing
-        // (Assuming initially facing to the right)
-        if (currentCol < maze.GetLength(1) - 1 && maze[currentRow, currentCol + 1])
+        if (Peek())
         {
-            currentCol++;
+            Move();
         }
     }
-    else
-    {
-        // If the way forward is blocked, turn left
-        TurnLeft();
-        onemove++;
-
-        // Update the car's direction accordingly
-        // (Assuming initially facing to the right)
-        // (Adjust the logic based on the car's initial direction)
-        if (currentRow > 0 && maze[currentRow - 1, currentCol])
-        {
-            currentRow--;
-        }
-    }
 }
-
-Console.WriteLine("Maze successfully navigated!");
-
-void TurnLeft()
-{
-    Console.WriteLine("Turned left");
-    for (int turns = 0; turns < 3; turns++)
-    {
-        Turn();
-    }
-}
-
-bool Peek(int row, int col)
-{
-    // Returns true if the next cell is open, otherwise false.
-    if (col < maze.GetLength(1) - 1 && maze[row, col + 1])
-    {
-        return false;
-    }
-    return false;
-}
+#region Basic functions
+// These functions are just her to make your intelisense work. 
+// They only have a conceptual function.
 
 void Move()
 {
-    // Moves the car 1 cell in the direction it is heading.
-    Console.WriteLine($"Moved to ({currentRow}, {currentCol + 1})");
+    // Moves the car 1 cell in the direction it is heading. 
+    onemove++;
 }
 
 void Turn()
 {
     // Turns the car 90 deg clockwise.
-    Console.WriteLine("Turned right");
+    Console.WriteLine("turnright.");
+}
+
+bool Peek()
+{
+    // Returns true if the next cell is open, otherwise false.
+    return true; // Just a placeholder value. 
 }
 
 bool AtGoal()
 {
     // Returns true if the current cell is the goal cell.
-    return (currentRow == maze.GetLength(0) - 1 && currentCol == maze.GetLength(1) - 1);
+    return true; // just a placholder
 }
+
+#endregion

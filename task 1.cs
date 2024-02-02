@@ -1,161 +1,87 @@
 int onemove = 0;
+const int loopLimmit = 37;
+const int shorterLimmit = 36;
+const int TwoForward = 2;
+const int gettingToGoal = 38;
 
 
 
 
-//Console.WriteLine(onemove);
 
-for (int i = 0; i < 37; i++)
-{
 
-    if (Peek())
-    {
-        Move();
-
-    }
-
-} //14
+GoingMedium();
 Console.WriteLine(onemove);
 
 Turn();
 Console.WriteLine("turnright.");
-Move();
-Move();
-Console.WriteLine(onemove);
-Turn(); //12
-Console.WriteLine("turnright.");
-
-
-
-for (int k = 0; k < 36; k++)
-{
-    if (Peek())
-    {
-        Move();
-    }
-    //Turn(); 
-}
-Console.WriteLine(onemove);
-
-TurnLeft();
-
-for (int m = 0; m < 2; m++)
-{
-    if (Peek())
-    {
-        Move();
-    }
-}
-Console.WriteLine(onemove);
-TurnLeft(); //10
-
-for (int k = 0; k < 36; k++)
-{
-    if (Peek())
-    {
-        Move();
-    }
-}
-Console.WriteLine(onemove);
-Turn();
-Console.WriteLine("turnright.");
-
-for (int m = 0; m < 2; m++)
-{
-    if (Peek())
-    {
-        Move();
-    }
-}
-Console.WriteLine(onemove);
-
-Turn(); //8
-Console.WriteLine("turnright.");
-
-for (int k = 0; k < 36; k++)
-{
-    if (Peek())
-    {
-        Move();
-    }
-    //Turn(); 
-}
-Console.WriteLine(onemove);
-TurnLeft();
-
-for (int q = 0; q < 2; q++)
-{
-    if (Peek())
-    {
-        Move();
-    }
-} //6
-Console.WriteLine(onemove);
-
-TurnLeft();
-
-for (int k = 0; k < 36; k++)
-{
-    if (Peek())
-    {
-        Move();
-    }
-}
+MovingTwoForward();
 Console.WriteLine(onemove);
 Turn();
 Console.WriteLine("turnright.");
 
 
-for (int u = 0; u < 2; u++)
-{
-    if (Peek())
-    {
-        Move();
-    }
-} //4
-Console.WriteLine(onemove);
 
-for (int k = 0; k < 36; k++)
-{
-    if (Peek())
-    {
-        Move();
-    }
-    //Turn();
-}
+GoingSmal();
+
 Console.WriteLine(onemove);
 
 TurnLeft();
 
-for (int u = 0; u < 2; u++)
-{
-    if (Peek())
-    {
-        Move();
-    }
-} //2
+MovingTwoForward();
+Console.WriteLine(onemove);
+TurnLeft();
+
+GoingSmal();
+Console.WriteLine(onemove);
+Turn();
+Console.WriteLine("turnright.");
+
+MovingTwoForward();
+Console.WriteLine(onemove);
+
+Turn();
+Console.WriteLine("turnright.");
+
+GoingSmal();
+Console.WriteLine(onemove);
+TurnLeft();
+
+MovingTwoForward();
+Console.WriteLine(onemove);
+
+TurnLeft();
+
+GoingSmal();
 Console.WriteLine(onemove);
 Turn();
 Console.WriteLine("turnright.");
 
 
-for (int l = 0; l < 38; l++)
-{
-    if (Peek())
-    {
-        Move();
+MovingTwoForward();
+Console.WriteLine(onemove);
+Turn();
+Console.WriteLine("turnright.");
+GoingSmal();
+Console.WriteLine(onemove);
 
-    }
-}
+TurnLeft();
+
+MovingTwoForward();
+Console.WriteLine(onemove);
+TurnLeft();
+
+
+GoingTOGoal();
 Console.WriteLine(onemove);
 if (AtGoal())
 {
     Console.WriteLine("yeeeey, winner winner chicken dinner.");
     return;
 }
-//Console.WriteLine(onemove);
 
-//my functions
+
+
+
 void TurnLeft()
 {
     Console.WriteLine("Turned left");
@@ -165,34 +91,82 @@ void TurnLeft()
     }
 }
 
+void GoingMedium()
+{
+    for (int i = 0; i < loopLimmit; i++)
+    {
+
+        if (Peek())
+        {
+            Move();
+
+        }
+
+    }
+}
+
+void GoingSmal()
+{
+    for (int k = 0; k < shorterLimmit; k++)
+    {
+        if (Peek())
+        {
+            Move();
+        }
+
+    }
+}
+
+void GoingTOGoal()
+{
+    for (int l = 0; l < gettingToGoal; l++)
+    {
+        if (Peek())
+        {
+            Move();
+
+        }
+    }
+}
+
+void MovingTwoForward()
+{
+    for (int u = 0; u < TwoForward; u++)
+    {
+        if (Peek())
+        {
+            Move();
+        }
+    }
+}
+
+
+
 #region Basic functions
-// These functions are just her to make your intelisense work. 
-// They only have a conceptual function.
+
 
 void Move()
 {
 
-    // Moves the car 1 cell in the direction it is heading.
     onemove++;
 
 }
 
 void Turn()
 {
-    // Turns the car 90 deg clockwise.
+
 
 }
 
 bool Peek()
 {
-    // Returns true if the next cell is open, otherwise false.
-    return true; // Just a placeholder value. 
+    return true;
 }
 
 bool AtGoal()
 {
-    // Returns true if the current cell is the goal cell.
-    return true; // just a placholder
+
+    return true;
 }
 
 #endregion

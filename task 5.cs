@@ -1,108 +1,49 @@
 int onemove = 0;
+const int MoveThreeForward = 3;
+const int MoveFourForward = 4;
+const int MoveSevenForward = 7;
+const int OneForward = 1;
+const int TwoForward = 2;
 
-for (int i = 0; i < 3; i++)
-{
-
-    if (Peek())
-    {
-        Move();
-
-    }
-
-}
+MovingForward(MoveThreeForward);
 Console.WriteLine(onemove);
 Turn();
 Console.WriteLine("turnright.");
 
-for (int y = 0; y < 7; y++)
-{
-
-    if (Peek())
-    {
-        Move();
-
-    }
-
-}
+MovingForward(MoveSevenForward);
 Console.WriteLine(onemove);
 TurnLeft();
 
-Move();
-Move();
+MovingForward(TwoForward);
 Console.WriteLine(onemove);
 TurnLeft();
 
-for (int r = 0; r < 3; r++)
-{
-
-    if (Peek())
-    {
-        Move();
-
-    }
-
-}
+MovingForward(MoveThreeForward);
 Console.WriteLine(onemove);
 Turn();
 Console.WriteLine("turnright.");
 
-for (int w = 0; w < 4; w++)
-{
-
-    if (Peek())
-    {
-        Move();
-
-    }
-
-}
+MovingForward(MoveFourForward);
 Console.WriteLine(onemove);
 TurnLeft();
-Move();
-Move();
+MovingForward(TwoForward);
 Console.WriteLine(onemove);
 TurnLeft();
 
-for (int q = 0; q < 4; q++)
-{
-
-    if (Peek())
-    {
-        Move();
-
-    }
-
-}
+MovingForward(MoveFourForward);
 Console.WriteLine(onemove);
 Turn();
 Console.WriteLine("turnright.");
-Move();
-Move();
+MovingForward(TwoForward);
 Console.WriteLine(onemove);
 Turn();
 Console.WriteLine("turnright.");
 
-for (int c = 0; c < 7; c++)
-{
-
-    if (Peek())
-    {
-        Move();
-
-    }
-
-}
+MovingForward(MoveSevenForward);
 Console.WriteLine(onemove);
 TurnLeft();
 
-for (int l = 0; l < 1; l++)
-{
-    if (Peek())
-    {
-        Move();
-
-    }
-}
+MovingForward(OneForward);
 
 Console.WriteLine(onemove);
 
@@ -122,6 +63,17 @@ void TurnLeft()
     for (int turns = 0; turns < 3; turns++)
     {
         Turn();
+    }
+}
+
+void MovingForward(int number)
+{
+    for (int u = 0; u < number; u++)
+    {
+        if (Peek())
+        {
+            Move();
+        }
     }
 }
 
